@@ -18,7 +18,7 @@ export default function Author() {
           <div className="flex flex-col gap-7">
             
             <h2 className="font-serif text-[var(--color-primary)] text-3xl md:text-3xl tracking-wide mb-4">
-              OM FÖRFATTAREN
+              ANDERS EKLUND
             </h2>
 
             <Divider/>

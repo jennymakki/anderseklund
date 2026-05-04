@@ -21,7 +21,7 @@ export default function Header() {
 
         <nav className="hidden md:flex gap-8 text-[1rem] text-[var(--color-primary)]">
           <a href="/">HEM</a>
-          <a href="#bok">BÖCKER</a>
+          <a href="#böcker">BÖCKER</a>
           <a href="#aktuellt">AKTUELLT</a>
           <a href="#kontakt">KONTAKT</a>
         </nav>
@@ -62,7 +62,7 @@ export default function Header() {
       >
         <div className="flex flex-col items-end gap-10 px-8 pt-28 text-2xl text-[var(--color-primary)]">
           <a href="/" onClick={() => setOpen(false)}>HEM</a>
-          <a href="#bok" onClick={() => setOpen(false)}>BÖCKER</a>
+          <a href="#böcker" onClick={() => setOpen(false)}>BÖCKER</a>
           <a href="#aktuellt" onClick={() => setOpen(false)}>AKTUELLT</a>
           <a href="#kontakt" onClick={() => setOpen(false)}>KONTAKT</a>
         </div>

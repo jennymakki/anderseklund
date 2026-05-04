@@ -2,6 +2,7 @@
 
 import Hero from "./components/blocks/Hero";
 import Author from "./components/blocks/Author";
+import BookSection from "./components/blocks/BookSection";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <section className="w-full py-0 px-0 bg-white space-y-6">
         <Hero/>
         <Author/>
+        <BookSection/>
       </section>
 
     </div>

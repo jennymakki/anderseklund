@@ -1,6 +1,14 @@
-export function PrimaryButton({ children }: { children: React.ReactNode }) {
+type Props = {
+  children: React.ReactNode;
+  onClick?: () => void;
+};
+
+export function PrimaryButton({ children, onClick }: Props) {
   return (
-    <button className="flex items-center gap-2 bg-[var(--color-primary)] text-white px-6 py-3 rounded-md cursor-pointer transition hover:bg-[#2B3A5C] active:scale-[0.98]">
+    <button
+      onClick={onClick}
+      className="flex items-center gap-2 bg-[var(--color-primary)] text-white px-6 py-3 rounded-md hover:bg-[#2B3A5C] cursor-pointer transition"
+    >
       {children}
     </button>
   );

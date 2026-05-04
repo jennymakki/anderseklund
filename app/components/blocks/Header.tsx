@@ -8,9 +8,8 @@ export default function Header() {
   return (
     <header className="w-full border-b border-[var(--color-border)] bg-[var(--color-background)]">
       <div className="mx-auto max-w-[75rem] px-6 md:px-20 py-6 flex items-center justify-between">
-        {/* Logo + subtitle */}
         <div className="flex flex-col">
-          <div className="font-serif uppercase text-3xl text-[var(--color-primary)] leading-tight">
+          <div className="font-serif uppercase text-3xl font-semibold tracking-[0.05em] text-[var(--color-primary)] leading-tight">
             HEBY HISTORIA
           </div>
           <div className="text-base text-[var(--color-primary)] tracking-wide">

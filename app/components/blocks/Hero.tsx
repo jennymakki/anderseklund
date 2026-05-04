@@ -8,16 +8,21 @@ import { Divider } from "../ui/Divider";
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-[85vh] overflow-hidden">
-      <div className="absolute inset-0">
-        <img
-          src="/hero.jpg"
-          alt="Heby historia"
-          className="w-full h-full object-cover object-right"
-        />
+<section className="relative w-full h-[85vh] overflow-hidden">
 
-        <div className="absolute inset-0 bg-[var(--color-background)]/40 backdrop-blur-sm" />
-      </div>
+  <div className="absolute inset-0">
+    <img
+      src="/hero.jpg"
+      alt="Heby historia"
+      className="
+        w-full h-full object-cover object-right
+        blur-sm md:blur-0
+        scale-110 md:scale-100
+      "
+    />
+    <div className="absolute inset-0 bg-[var(--color-background)]/30 md:bg-[var(--color-background)]/20 backdrop-blur-sm md:backdrop-blur-sm" />
+  </div>
+
 
       <Container>
         <div className="relative z-10 h-[85vh] flex items-center">
@@ -35,19 +40,19 @@ export default function Hero() {
             </p>
 
             <Divider />
-            <p className="text-[var(--color-primary)] text-lg leading-relaxed max-w-xl">
+            <p className="text-[var(--color-primary)] text-lg leading-relaxed max-w-xs">
               Författade av en lokal historieberättare med kärlek till Heby.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <PrimaryButton>
                 <BookOpen size={18} />
-                Se böcker
+                SE BÖCKER
               </PrimaryButton>
 
               <SecondaryButton>
                 <Mail size={18} />
-                Kontakta mig
+                KONTAKTA MIG
               </SecondaryButton>
             </div>
           </div>

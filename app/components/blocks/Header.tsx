@@ -14,7 +14,7 @@ export default function Header() {
             HEBY HISTORIA
           </div>
           <div className="text-base text-[var(--color-primary)] tracking-wide">
-            Böcker av lokalt hjärta
+            BÖCKER AV LOKALT HJÄRTA
           </div>
         </div>
 

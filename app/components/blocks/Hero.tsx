@@ -1,0 +1,58 @@
+"use client";
+
+import { BookOpen, Mail } from "lucide-react";
+import { PrimaryButton } from "../ui/buttons/PrimaryButton";
+import { SecondaryButton } from "../ui/buttons/SecondaryButton";
+import { Container } from "../ui/Container";
+import { Divider } from "../ui/Divider";
+
+export default function Hero() {
+  return (
+    <section className="relative w-full h-[85vh] overflow-hidden">
+      <div className="absolute inset-0">
+        <img
+          src="/hero.jpg"
+          alt="Heby historia"
+          className="w-full h-full object-cover object-right"
+        />
+
+        <div className="absolute inset-0 bg-[var(--color-background)]/40 backdrop-blur-sm" />
+      </div>
+
+      <Container>
+        <div className="relative z-10 h-[85vh] flex items-center">
+          <div className="max-w-2xl space-y-2 md:space-y-3">
+            <p className="text-[var(--color-primary)] text-sm tracking-wide">
+              BÖCKER OM
+            </p>
+
+            <h1 className="font-serif text-[2.5rem] md:text-7xl text-[var(--color-primary)] leading-[1.05]">
+              HEBYS HISTORIA
+            </h1>
+
+            <p className="text-[var(--color-accent)] text-xl md:text-2xl font-serif">
+              UNDER 1900-TALET
+            </p>
+
+            <Divider />
+            <p className="text-[var(--color-primary)] text-lg leading-relaxed max-w-xl">
+              Författade av en lokal historieberättare med kärlek till Heby.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <PrimaryButton>
+                <BookOpen size={18} />
+                Se böcker
+              </PrimaryButton>
+
+              <SecondaryButton>
+                <Mail size={18} />
+                Kontakta mig
+              </SecondaryButton>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}

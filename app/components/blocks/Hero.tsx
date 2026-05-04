@@ -27,11 +27,11 @@ export default function Hero() {
       <Container>
         <div className="relative z-10 h-[85vh] flex items-center">
           <div className="max-w-2xl space-y-2 md:space-y-3">
-            <p className="text-[var(--color-primary)] text-sm tracking-wide">
+            <p className="text-[var(--color-primary)] text-xl tracking-wide">
               BÖCKER OM
             </p>
 
-            <h1 className="font-serif text-[2.5rem] md:text-7xl text-[var(--color-primary)] leading-[1.05]">
+            <h1 className="font-serif pb-4 text-[2.5rem] md:text-7xl text-[var(--color-primary)] leading-[1.05]">
               HEBYS HISTORIA
             </h1>
 
@@ -40,7 +40,7 @@ export default function Hero() {
             </p>
 
             <Divider />
-            <p className="text-[var(--color-primary)] text-lg leading-relaxed max-w-xs">
+            <p className="text-[var(--color-primary)] text-lg leading-relaxed max-w-s">
               Författade av en lokal historieberättare med kärlek till Heby.
             </p>
 

@@ -3,6 +3,7 @@
 import Hero from "./components/blocks/Hero";
 import Author from "./components/blocks/Author";
 import BookSection from "./components/blocks/BookSection";
+import Contact from "./components/blocks/Contact";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Hero/>
         <Author/>
         <BookSection/>
+        <Contact/>
       </section>
 
     </div>

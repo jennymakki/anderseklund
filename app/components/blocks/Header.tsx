@@ -6,8 +6,10 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full border-b border-[var(--color-border)] bg-[var(--color-background)]">
+    <header className="fixed top-0 left-0 w-full z-50 border-b border-[var(--color-border)] bg-[var(--color-background)]">
+      
       <div className="mx-auto max-w-[75rem] px-6 md:px-20 py-6 flex items-center justify-between">
+        
         <div className="flex flex-col">
           <div className="font-serif uppercase text-3xl font-semibold tracking-[0.05em] text-[var(--color-primary)] leading-tight">
             HEBY HISTORIA
@@ -17,7 +19,6 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Desktop nav */}
         <nav className="hidden md:flex gap-8 text-[1rem] text-[var(--color-primary)]">
           <a href="/">HEM</a>
           <a href="#bok">BÖCKER</a>
@@ -25,26 +26,48 @@ export default function Header() {
           <a href="#kontakt">KONTAKT</a>
         </nav>
 
-        {/* Burger button */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden flex flex-col gap-1"
+          className="md:hidden relative w-8 h-6 flex flex-col justify-between z-[60]"
         >
-          <span className="w-6 h-[2px] bg-[var(--color-primary)]" />
-          <span className="w-6 h-[2px] bg-[var(--color-primary)]" />
-          <span className="w-6 h-[2px] bg-[var(--color-primary)]" />
+          <span
+            className={`h-[2px] w-6 bg-[var(--color-primary)] transition-transform duration-300 ${
+              open ? "rotate-45 translate-y-2.5" : ""
+            }`}
+          />
+          <span
+            className={`h-[2px] w-6 bg-[var(--color-primary)] transition-opacity duration-300 ${
+              open ? "opacity-0" : ""
+            }`}
+          />
+          <span
+            className={`h-[2px] w-6 bg-[var(--color-primary)] transition-transform duration-300 ${
+              open ? "-rotate-45 -translate-y-2.5" : ""
+            }`}
+          />
         </button>
       </div>
 
-      {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden px-6 pb-6 flex flex-col gap-4 items-end text-lg text-[var(--color-primary)]">
-          <a href="/">HEM</a>
-          <a href="#bok">BÖCKER</a>
-          <a href="#aktuellt">AKTUELLT</a>
-          <a href="#kontakt">KONTAKT</a>
+      <div
+        className={`fixed inset-0 z-40 bg-black/20 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
+          open ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setOpen(false)}
+      />
+
+      <div
+        className={`fixed top-0 right-0 h-full w-[80%] max-w-sm z-50 bg-[var(--color-background)] shadow-2xl border-l border-[var(--color-border)] transform transition-transform duration-300 ease-in-out md:hidden ${
+          open ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex flex-col items-end gap-10 px-8 pt-28 text-2xl text-[var(--color-primary)]">
+          <a href="/" onClick={() => setOpen(false)}>HEM</a>
+          <a href="#bok" onClick={() => setOpen(false)}>BÖCKER</a>
+          <a href="#aktuellt" onClick={() => setOpen(false)}>AKTUELLT</a>
+          <a href="#kontakt" onClick={() => setOpen(false)}>KONTAKT</a>
         </div>
-      )}
+      </div>
+
     </header>
   );
 }

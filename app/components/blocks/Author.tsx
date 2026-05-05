@@ -9,7 +9,7 @@ export default function Author() {
 <div className="flex flex-col md:flex-row pb-10 items-center md:items-start gap-12 max-w-4xl mx-auto">          
           <div className="flex-shrink-0">
             <img
-              src="/author.jpg"
+              src="/anders.png"
               alt="Anders Eklund"
               className="w-48 h-48 md:w-64 md:h-64 bg-[var(--color-primary)] object-cover rounded-full"
             />

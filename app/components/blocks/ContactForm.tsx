@@ -22,7 +22,7 @@ export default function ContactForm({ selectedBook }: Props) {
   }, [selectedBook]);
 
   return (
-    <form className="flex flex-col gap-6">
+    <form className="flex flex-col pb-5 gap-6">
 
       <Input placeholder="Ditt namn" />
       <Input type="email" placeholder="Din e-post" />

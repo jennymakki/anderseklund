@@ -1,12 +1,12 @@
 export default function Footer() {
   return (
-    <footer className="relative w-full bg-[var(--color-primary)] overflow-visible">
+    <footer className="relative w-full bg-[#122D48] overflow-visible">
       
-      <div className="absolute left-1/2 bottom-full -translate-x-1/2 translate-y-5">
+      <div className="absolute left-1/2 bottom-full -translate-x-1/2 translate-y-0.5">
         <img
           src="/siluett.png"
           alt="Heby Historia"
-          className="h-40 md:h-56 w-auto block pt-2"
+          className="h-40 md:h-56 w-auto block"
         />
       </div>
 

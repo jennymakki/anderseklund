@@ -11,8 +11,8 @@ type Props = {
 
 export default function ContactForm({ selectedBook }: Props) {
   const [bookTitle, setBookTitle] = useState(selectedBook || "");
-
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (selectedBook) {
@@ -21,26 +21,67 @@ export default function ContactForm({ selectedBook }: Props) {
     }
   }, [selectedBook]);
 
-  return (
-    <form className="flex flex-col pb-5 gap-6">
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-      <Input placeholder="Ditt namn" />
-      <Input type="email" placeholder="Din e-post" />
+    setLoading(true);
+
+    const formData = new FormData(e.currentTarget);
+
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      book: bookTitle,
+      message: formData.get("message"),
+    };
+
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify(data),
+      });
+
+      alert("Meddelandet skickat!");
+
+      e.currentTarget.reset();
+      setMessage("");
+      setBookTitle("");
+    } catch (error) {
+      alert("Något gick fel, försök igen.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="flex flex-col pb-5 gap-6">
+      
+      <Input name="name" placeholder="Ditt namn *" required />
 
       <Input
+        name="email"
+        type="email"
+        placeholder="Din e-post *"
+        required
+      />
+
+      <Input
+        name="book"
         value={bookTitle}
         onChange={(e) => setBookTitle(e.target.value)}
         placeholder="Boktitel"
       />
 
       <Textarea
+        name="message"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-        placeholder="Ditt meddelande"
+        placeholder="Ditt meddelande *"
+        required
       />
 
       <FormButton>
-        SKICKA MEDDELANDE
+        {loading ? "SKICKAR..." : "SKICKA MEDDELANDE"}
       </FormButton>
 
     </form>

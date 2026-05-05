@@ -5,6 +5,7 @@ import Hero from "./components/blocks/Hero";
 import Author from "./components/blocks/Author";
 import BookSection from "./components/blocks/BookSection";
 import Contact from "./components/blocks/Contact";
+import Events from "./components/blocks/Events";
 
 export default function Home() {
   const [selectedBook, setSelectedBook] = useState("");
@@ -18,6 +19,8 @@ export default function Home() {
 
         <BookSection onSelectBook={setSelectedBook} />
 
+        <Events/>
+        
         <Contact selectedBook={selectedBook} />
       </section>
     </div>

@@ -13,7 +13,7 @@ export default function BookSection({ onSelectBook }: { onSelectBook?: (title: s
   const visibleBooks = showAll ? books : books.slice(0, 3);
 
   return (
-    <section id="böcker" className="py-24">
+    <section id="böcker" className="py-24 scroll-mt-25">
       <Container>
         <div className="flex flex-col pb-10 items-center text-center gap-4">
           <h2 className="font-serif text-[var(--color-primary)] text-3xl">

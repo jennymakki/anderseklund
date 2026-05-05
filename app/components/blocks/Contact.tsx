@@ -4,7 +4,7 @@ import { Divider } from "../ui/Divider";
 
 export default function Contact({ selectedBook }: { selectedBook?: string }) {
   return (
-    <section id="kontakt" className="py-24 bg-[#D8DBDF] text-white">
+    <section id="kontakt" className="py-24 bg-[#D8DBDF] text-white scroll-mt-25">
       <Container>
 
         <div className="max-w-2xl text-center mx-auto flex flex-col gap-10">

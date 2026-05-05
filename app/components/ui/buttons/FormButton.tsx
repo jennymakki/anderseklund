@@ -11,8 +11,8 @@ export function FormButton({ children, onClick }: Props) {
       className="
         w-full 
         flex items-center justify-center 
-        bg-[var(--color-accent)] 
-        text-[var(--color-primary)] 
+        bg-[var(--color-primary)] 
+        text-[var(--color-secondary)] 
         font-medium 
         px-6 py-4 
         rounded-md 

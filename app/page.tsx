@@ -1,21 +1,25 @@
 "use client";
 
+import { useState } from "react";
 import Hero from "./components/blocks/Hero";
 import Author from "./components/blocks/Author";
 import BookSection from "./components/blocks/BookSection";
 import Contact from "./components/blocks/Contact";
 
 export default function Home() {
+  const [selectedBook, setSelectedBook] = useState("");
+
   return (
     <div className="flex flex-col items-center justify-center bg-zinc-50">
-      
       <section className="w-full py-0 px-0 bg-white space-y-6">
-        <Hero/>
-        <Author/>
-        <BookSection/>
-        <Contact/>
-      </section>
+        <Hero />
 
+        <Author />
+
+        <BookSection onSelectBook={setSelectedBook} />
+
+        <Contact selectedBook={selectedBook} />
+      </section>
     </div>
   );
 }

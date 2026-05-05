@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Input } from "../ui/inputs/Input";
 import { Textarea } from "../ui/inputs/Textarea";
 import { FormButton } from "../ui/buttons/FormButton";
@@ -10,15 +10,28 @@ type Props = {
 };
 
 export default function ContactForm({ selectedBook }: Props) {
-  const [message, setMessage] = useState(
-    selectedBook ? `Jag är intresserad av boken: ${selectedBook}` : ""
-  );
+  const [bookTitle, setBookTitle] = useState(selectedBook || "");
+
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    if (selectedBook) {
+      setBookTitle(selectedBook);
+      setMessage(`Jag är intresserad av boken: ${selectedBook}`);
+    }
+  }, [selectedBook]);
 
   return (
     <form className="flex flex-col gap-6">
 
       <Input placeholder="Ditt namn" />
       <Input type="email" placeholder="Din e-post" />
+
+      <Input
+        value={bookTitle}
+        onChange={(e) => setBookTitle(e.target.value)}
+        placeholder="Boktitel"
+      />
 
       <Textarea
         value={message}

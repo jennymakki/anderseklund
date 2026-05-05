@@ -7,7 +7,7 @@ import { books } from "@/app/data/books";
 import { Divider } from "../ui/Divider";
 import { PrimaryButton } from "../ui/buttons/PrimaryButton";
 
-export default function BookSection() {
+export default function BookSection({ onSelectBook }: { onSelectBook?: (title: string) => void }) {
   const [showAll, setShowAll] = useState(false);
 
   const visibleBooks = showAll ? books : books.slice(0, 3);
@@ -24,12 +24,16 @@ export default function BookSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {visibleBooks.map((book) => (
-            <BookCard key={book.id} book={book} />
+            <BookCard
+              key={book.id}
+              book={book}
+              onSelectBook={onSelectBook}
+            />
           ))}
         </div>
 
         {books.length > 3 && (
-          <div className="flex justify-center mt-10 ">
+          <div className="flex justify-center mt-10">
             <PrimaryButton onClick={() => setShowAll(!showAll)}>
               {showAll ? "VISA MINDRE" : "VISA FLER BÖCKER"}
             </PrimaryButton>

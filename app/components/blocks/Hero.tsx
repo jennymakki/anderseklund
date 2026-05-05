@@ -9,18 +9,13 @@ import { Divider } from "../ui/Divider";
 export default function Hero() {
   return (
     <section className="relative w-full h-[85vh] overflow-hidden">
-      <div className="absolute inset-0">
-        <img
-          src="/hero.jpg"
-          alt="Heby historia"
-          className="
-        w-full h-full object-cover object-right
-        blur-sm md:blur-0
-        scale-110 md:scale-100 bg-
-      "
-        />
-        <div className="absolute inset-0 bg-[var(--color-background)]/30 md:bg-[var(--color-background)]/20 backdrop-blur-sm md:backdrop-blur-sm" />
-      </div>
+<div className="absolute inset-0">
+  <img
+    src="/hero.png"
+    alt="Heby historia"
+    className="w-full h-full object-cover object-right scale-110 md:scale-100"
+  />
+</div>
 
       <Container>
         <div className="relative z-10 h-[85vh] flex items-center">

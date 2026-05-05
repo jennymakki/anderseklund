@@ -5,17 +5,16 @@ type Props = {
     title: string;
     description: string;
     image: string;
+    price: string;
   };
+  onSelectBook?: (title: string) => void;
 };
 
-export function BookCard({ book }: Props) {
+export function BookCard({ book, onSelectBook }: Props) {
   return (
     <div className="border border-[var(--color-border)] rounded-md overflow-hidden hover:shadow-md transition bg-white">
       <div className="aspect-[6/6]">
-        <img
-          src={book.image}
-          className="w-full h-full object-cover bg-[var(--color-primary)]"
-        />
+        <img src={book.image} className="w-full h-full object-cover bg-[var(--color-primary)]" />
       </div>
 
       <div className="p-6 flex flex-col gap-3">
@@ -27,12 +26,18 @@ export function BookCard({ book }: Props) {
           {book.description}
         </p>
 
+        <p className="text-lg text-[var(--color-text-primary)]">
+          {book.price}
+        </p>
+
         <SecondaryButton
-          onClick={() =>
+          onClick={() => {
+            onSelectBook?.(book.title);
+
             document
               .getElementById("kontakt")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
         >
           BESTÄLL FRÅN FÖRFATTARE
         </SecondaryButton>

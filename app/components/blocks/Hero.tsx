@@ -5,16 +5,21 @@ import { PrimaryButton } from "../ui/buttons/PrimaryButton";
 import { SecondaryButton } from "../ui/buttons/SecondaryButton";
 import { Container } from "../ui/Container";
 import { Divider } from "../ui/Divider";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <section className="relative w-full h-[85vh] overflow-hidden">
 <div className="absolute inset-0">
-  <img
-    src="/hero.png"
-    alt="Heby historia"
-    className="w-full h-full object-cover object-right scale-110 md:scale-100"
-  />
+<Image
+  src="/hero.png"
+  alt="Heby historia"
+  fill
+  priority
+  className="object-cover object-right scale-110 md:scale-100"
+/>
+
+  <div className="absolute inset-0 bg-white/40 max-[1000px]:backdrop-blur-sm max-[1000px]:bg-white/50" />
 </div>
 
       <Container>

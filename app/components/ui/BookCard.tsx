@@ -12,35 +12,45 @@ type Props = {
 
 export function BookCard({ book, onSelectBook }: Props) {
   return (
-    <div className="border border-[var(--color-border)] rounded-md overflow-hidden hover:shadow-md transition bg-white">
-      <div className="aspect-[6/6]">
-        <img src={book.image} className="w-full h-full object-cover bg-[var(--color-primary)]" />
+    <div className="border border-[var(--color-border)] rounded-md overflow-hidden hover:shadow-md transition bg-white flex flex-col h-full">
+      
+      <div className="aspect-square">
+        <img
+          src={book.image}
+          alt={book.title}
+          className="w-full h-full object-cover bg-[var(--color-primary)]"
+        />
       </div>
 
-      <div className="p-6 flex flex-col gap-3">
+      <div className="p-6 flex flex-col flex-1 gap-3">
+        
         <h3 className="font-serif text-[var(--color-primary)] text-xl">
           {book.title}
         </h3>
 
-        <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+        <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed line-clamp-3">
           {book.description}
         </p>
 
-        <p className="text-lg text-[var(--color-text-primary)]">
-          {book.price}
-        </p>
+        <div className="mt-auto flex flex-col gap-3">
 
-        <SecondaryButton
-          onClick={() => {
-            onSelectBook?.(book.title);
+          <p className="text-lg font-medium text-[var(--color-text-primary)]">
+            {book.price}
+          </p>
 
-            document
-              .getElementById("kontakt")
-              ?.scrollIntoView({ behavior: "smooth" });
-          }}
-        >
-          BESTÄLL FRÅN FÖRFATTARE
-        </SecondaryButton>
+          <SecondaryButton
+            onClick={() => {
+              onSelectBook?.(book.title);
+
+              document
+                .getElementById("kontakt")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            BESTÄLL FRÅN FÖRFATTARE
+          </SecondaryButton>
+
+        </div>
       </div>
     </div>
   );

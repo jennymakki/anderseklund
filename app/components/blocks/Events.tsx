@@ -7,7 +7,7 @@ import { Divider } from "../ui/Divider";
 
 export default function Events() {
   return (
-    <section id="aktuellt" className="pb-10 bg-white scroll-mt-32">
+    <section id="aktuellt" className="py-15 bg-white scroll-mt-32">
       <Container>
         <div className="flex flex-col items-center mb-12">
           <h2 className="font-serif text-3xl text-[var(--color-primary)]">

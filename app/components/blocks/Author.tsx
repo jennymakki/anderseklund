@@ -6,7 +6,7 @@ export default function Author() {
     <section className="py-0">
       <Container>
         
-<div className="flex flex-col md:flex-row pb-10 items-center md:items-start gap-12 max-w-4xl mx-auto">          
+<div className="flex flex-col md:flex-row py-15 items-center md:items-start gap-12 max-w-4xl mx-auto">          
           <div className="flex-shrink-0">
             <img
               src="/anders.png"

@@ -22,15 +22,15 @@ export default function BookSection({ onSelectBook }: { onSelectBook?: (title: s
           <Divider />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {visibleBooks.map((book) => (
-            <BookCard
-              key={book.id}
-              book={book}
-              onSelectBook={onSelectBook}
-            />
-          ))}
-        </div>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+  {visibleBooks.map((book) => (
+    <BookCard
+      key={book.id}
+      book={book}
+      onSelectBook={onSelectBook}
+    />
+  ))}
+</div>
 
         {books.length > 3 && (
           <div className="flex justify-center mt-10">

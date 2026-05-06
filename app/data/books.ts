@@ -2,7 +2,7 @@ export const books = [
   {
     id: "1",
     title: "Tillbakablick Heby - En by i förändring",
-    description: "Beskriv bokens innehåll här. Vad handlar den om, vilken tid, vilka människor eller platser?",
+    description: "Under 1960-talet förändrades Heby i grunden. Vägarna gick genom centrum, inga hyreshus fanns och tegelbruken var i full drift, vilket gav arbete och formade samhället på den tiden.",
     image: "/books/tillbakablick.png",
     price: "250 kr",
   },

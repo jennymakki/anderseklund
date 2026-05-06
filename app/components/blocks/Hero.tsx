@@ -49,7 +49,13 @@ export default function Hero() {
                 SE BÖCKER
               </PrimaryButton>
 
-              <SecondaryButton>
+              <SecondaryButton
+                onClick={() => {
+                  document
+                    .getElementById("kontakt")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
                 <Mail size={18} />
                 KONTAKTA MIG
               </SecondaryButton>

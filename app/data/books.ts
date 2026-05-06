@@ -1,15 +1,15 @@
 export const books = [
   {
     id: "1",
-    title: "TITEL",
+    title: "Tillbakablick Heby - En by i förändring",
     description: "Beskriv bokens innehåll här. Vad handlar den om, vilken tid, vilka människor eller platser?",
     image: "/books/placeholder.jpg",
     price: "250 kr",
   },
   {
     id: "2",
-    title: "TITEL2",
-    description: "Beskriv bokens innehåll här. Vad handlar den om, vilken tid, vilka människor eller platser?",
+    title: "Club Shake",
+    description: "Ett minne från en tid när Heby var navet för tonåringarna i städer och byar kring Heby. Ett minne av musiken, banden, hysterin och upplevelsen, som dagens 75 åringar fick uppleva i Heby när de var tonåringar.",
     image: "/books/placeholder.jpg",
     price: "250 kr",
   },

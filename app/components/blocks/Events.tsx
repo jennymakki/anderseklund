@@ -7,18 +7,19 @@ import { Divider } from "../ui/Divider";
 
 export default function Events() {
   return (
-<section id="aktuellt" className="py-24 bg-white scroll-mt-32">
-  <Container>
+    <section id="aktuellt" className="pb-10 bg-white scroll-mt-32">
+      <Container>
+        <div className="flex flex-col items-center mb-12">
+          <h2 className="font-serif text-3xl text-[var(--color-primary)]">
+            AKTUELLT
+          </h2>
 
-    <div className="flex flex-col items-center mb-12">
-      <h2 className="font-serif text-3xl text-[var(--color-primary)]">
-        AKTUELLT
-      </h2>
-<div className="pb-10 pt-6">
-      <Divider />
-      </div>
+          <div className="pt-6">
+            <Divider />
+          </div>
+        </div>
 
-        <div className="flex flex-col gap-10 max-w-2xl mx-auto">
+        <div className="flex flex-col md:flex-row gap-10 items-center justify-center w-full max-w-4xl mx-auto">
           {events.map((event) => (
             <EventCard
               key={event.id}
@@ -29,8 +30,6 @@ export default function Events() {
             />
           ))}
         </div>
-        </div>
-
       </Container>
     </section>
   );

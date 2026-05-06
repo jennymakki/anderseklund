@@ -9,9 +9,9 @@ type EventProps = {
 
 export function EventCard({ title, date, time, description }: EventProps) {
   return (
-    <div className="flex gap-4">
+    <div className="flex max-w-sm gap-4">
       
-      <div className="w-10 h-10 rounded-full bg-[var(--color-primary)] flex items-center justify-center flex-shrink-0">
+      <div className="w-12 h-12 rounded-full bg-[var(--color-primary)] flex items-center justify-center flex-shrink-0">
         <Calendar className="text-white w-5 h-5" />
       </div>
 
@@ -28,7 +28,7 @@ export function EventCard({ title, date, time, description }: EventProps) {
           {description}
         </p>
       </div>
-      </div>
-    
-  )
+
+    </div>
+  );
 }

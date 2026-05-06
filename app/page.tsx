@@ -6,6 +6,7 @@ import Author from "./components/blocks/Author";
 import BookSection from "./components/blocks/BookSection";
 import Contact from "./components/blocks/Contact";
 import Events from "./components/blocks/Events";
+import Siluett from "./components/blocks/Siluett";
 
 export default function Home() {
   const [selectedBook, setSelectedBook] = useState("");
@@ -19,9 +20,13 @@ export default function Home() {
 
         <BookSection onSelectBook={setSelectedBook} />
 
-        <Events/>
-        
+        <Events />
+
         <Contact selectedBook={selectedBook} />
+
+        <div className=" bg-[#D8DBDF] relative flex justify-center -mt-16 md:-mt-24">
+          <Siluett />
+        </div>
       </section>
     </div>
   );

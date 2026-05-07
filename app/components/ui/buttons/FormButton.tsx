@@ -1,13 +1,15 @@
 type Props = {
   children: React.ReactNode;
+  disabled?: boolean;
   onClick?: () => void;
 };
 
-export function FormButton({ children, onClick }: Props) {
+export function FormButton({ children, onClick, disabled }: Props) {
   return (
     <button
       type="submit"
       onClick={onClick}
+      disabled={disabled}
       className="
         w-full 
         flex items-center justify-center 
@@ -16,12 +18,13 @@ export function FormButton({ children, onClick }: Props) {
         font-medium 
         px-6 py-4 
         rounded-md 
-        hover:opacity-90 
         transition
-        cursor-pointer
+        hover:opacity-90
+        disabled:opacity-50
+        disabled:cursor-not-allowed
       "
     >
-      {children}
+      {disabled ? "SKICKAR..." : children}
     </button>
   );
 }

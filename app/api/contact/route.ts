@@ -13,16 +13,12 @@ export async function POST(req: Request) {
       to: "kattmynta@hotmail.com",
       subject: `Ny bokförfrågan från ${name}`,
       replyTo: email,
-
       html: `
         <h2>Ny kontaktförfrågan</h2>
-
         <p><strong>Namn:</strong> ${name}</p>
         <p><strong>E-post:</strong> ${email}</p>
         <p><strong>Bok:</strong> ${book || "Ingen vald bok"}</p>
-
-        <p><strong>Meddelande:</strong></p>
-        <p>${message}</p>
+        <p><strong>Meddelande:</strong> ${message}</p>
       `,
     });
 

@@ -13,6 +13,8 @@ export default function ContactForm({ selectedBook }: Props) {
   const [bookTitle, setBookTitle] = useState(selectedBook || "");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
     if (selectedBook) {
@@ -25,6 +27,8 @@ export default function ContactForm({ selectedBook }: Props) {
     e.preventDefault();
 
     setLoading(true);
+    setSuccess(false);
+    setErrorMessage("");
 
     const formData = new FormData(e.currentTarget);
 
@@ -44,11 +48,13 @@ export default function ContactForm({ selectedBook }: Props) {
         body: JSON.stringify(data),
       });
 
+      const result = await response.json();
+
       if (!response.ok) {
-        throw new Error("Failed to send");
+        throw new Error(result?.error || "Failed to send");
       }
 
-      alert("Meddelandet skickat!");
+      setSuccess(true);
 
       e.currentTarget.reset();
       setMessage("");
@@ -56,8 +62,7 @@ export default function ContactForm({ selectedBook }: Props) {
 
     } catch (error) {
       console.error(error);
-
-      alert("Något gick fel, försök igen.");
+      setErrorMessage("Något gick fel, försök igen.");
     } finally {
       setLoading(false);
     }
@@ -66,18 +71,8 @@ export default function ContactForm({ selectedBook }: Props) {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col pb-5 gap-6">
 
-      <Input
-        name="name"
-        placeholder="Ditt namn *"
-        required
-      />
-
-      <Input
-        name="email"
-        type="email"
-        placeholder="Din e-post *"
-        required
-      />
+      <Input name="name" placeholder="Ditt namn *" required />
+      <Input name="email" type="email" placeholder="Din e-post *" required />
 
       <Input
         name="book"
@@ -94,7 +89,19 @@ export default function ContactForm({ selectedBook }: Props) {
         required
       />
 
-      <FormButton>
+      {success && (
+        <p className="text-green-700 bg-green-50 border border-green-200 rounded-md px-4 py-3 text-sm">
+          Meddelandet skickades!
+        </p>
+      )}
+
+      {errorMessage && (
+        <p className="text-red-700 bg-red-50 border border-red-200 rounded-md px-4 py-3 text-sm">
+          {errorMessage}
+        </p>
+      )}
+
+      <FormButton disabled={loading}>
         {loading ? "SKICKAR..." : "SKICKA MEDDELANDE"}
       </FormButton>
 

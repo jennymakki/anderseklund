@@ -16,8 +16,42 @@ const sourceSerif = Source_Serif_4({
 
 export const metadata: Metadata = {
   title: "Heby Historia",
-  description: "En historisk bok om Heby",
-};
+  description:
+    "Böcker om Hebys historia under 1900-talet av Anders Eklund.",
+  keywords: [
+    "Heby",
+    "historia",
+    "Anders Eklund",
+    "böcker",
+    "lokalhistoria",
+  ],
+
+  openGraph: {
+    title: "Heby Historia",
+    description:
+      "Böcker om Hebys historia under 1900-talet av Anders Eklund.",
+    url: "https://anderseklund.vercel.app",
+    siteName: "Heby Historia",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Heby Historia",
+      },
+    ],
+    locale: "sv_SE",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Heby Historia",
+    description:
+      "Böcker om Hebys historia under 1900-talet av Anders Eklund.",
+    images: ["/og-image.png"],
+  },
+}
 
 export default function RootLayout({
   children,

@@ -17,7 +17,7 @@ export function BookCard({ book, onSelectBook }: Props) {
         <img
           src={book.image}
           alt={book.title}
-          className="max-w-full max-h-full object-contain shadow-[6px_6px_12px_rgba(0,0,0,0.25)]"
+          className="block mx-auto max-w-full max-h-full object-contain shadow-[6px_6px_12px_rgba(0,0,0,0.25)]"
         />
       </div>
 

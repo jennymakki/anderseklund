@@ -28,7 +28,7 @@ export function BookCard({ book, onSelectBook }: Props) {
           {book.title}
         </h3>
 
-        <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed line-clamp-3">
+        <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed line-clamp-6">
           {book.description}
         </p>
 

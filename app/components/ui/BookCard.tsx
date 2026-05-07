@@ -1,4 +1,5 @@
 import { SecondaryButton } from "./buttons/SecondaryButton";
+import Image from "next/image";
 
 type Props = {
   book: {
@@ -13,11 +14,20 @@ type Props = {
 export function BookCard({ book, onSelectBook }: Props) {
   return (
     <div className="group border border-[var(--color-border)] rounded-md overflow-hidden bg-white flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-      <div className="aspect-square bg-[var(--color-secondary)] flex items-center justify-center p-2">
-        <img
+      <div className="aspect-square bg-[var(--color-secondary)] flex items-center justify-center p-4">
+        <Image
           src={book.image}
           alt={book.title}
-          className="block mx-auto max-w-full max-h-full object-contain shadow-[6px_6px_12px_rgba(0,0,0,0.25)]"
+          width={260}
+          height={260}
+          className="
+      block
+      mx-auto
+      object-contain
+      shadow-[6px_6px_12px_rgba(0,0,0,0.25)]
+      transition-transform duration-300
+      group-hover:scale-[1.03]
+    "
         />
       </div>
 

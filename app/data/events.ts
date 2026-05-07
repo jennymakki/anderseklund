@@ -13,6 +13,6 @@ export const events = [
     date: "Pågående insamling",
     time: "Flexibel kontakt",
     description:
-      "Är du född 1945–1960? Dela dina minnen från Heby med mig – material samlas till en ny bok.",
+      "Är du född 1945–1960? Dela dina minnen från Heby med mig – material samlas till en ny bok. Kontakta mig i formuläret nedan.",
   },
 ];

@@ -36,17 +36,27 @@ export default function ContactForm({ selectedBook }: Props) {
     };
 
     try {
-      await fetch("/api/contact", {
+      const response = await fetch("/api/contact", {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify(data),
       });
+
+      if (!response.ok) {
+        throw new Error("Failed to send");
+      }
 
       alert("Meddelandet skickat!");
 
       e.currentTarget.reset();
       setMessage("");
       setBookTitle("");
+
     } catch (error) {
+      console.error(error);
+
       alert("Något gick fel, försök igen.");
     } finally {
       setLoading(false);
@@ -55,8 +65,12 @@ export default function ContactForm({ selectedBook }: Props) {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col pb-5 gap-6">
-      
-      <Input name="name" placeholder="Ditt namn *" required />
+
+      <Input
+        name="name"
+        placeholder="Ditt namn *"
+        required
+      />
 
       <Input
         name="email"

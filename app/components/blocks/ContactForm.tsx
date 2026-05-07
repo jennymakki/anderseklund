@@ -23,50 +23,52 @@ export default function ContactForm({ selectedBook }: Props) {
     }
   }, [selectedBook]);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-    setLoading(true);
-    setSuccess(false);
-    setErrorMessage("");
+  const form = e.currentTarget;
 
-    const formData = new FormData(e.currentTarget);
+  setLoading(true);
+  setSuccess(false);
+  setErrorMessage("");
 
-    const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      book: bookTitle,
-      message: formData.get("message"),
-    };
+  const formData = new FormData(form);
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      const result = await response.json();
-
-      if (!response.ok) {
-        throw new Error(result?.error || "Failed to send");
-      }
-
-      setSuccess(true);
-
-      e.currentTarget.reset();
-      setMessage("");
-      setBookTitle("");
-
-    } catch (error) {
-      console.error(error);
-      setErrorMessage("Något gick fel, försök igen.");
-    } finally {
-      setLoading(false);
-    }
+  const data = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    book: bookTitle,
+    message: formData.get("message"),
   };
+
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result?.error || "Failed to send");
+    }
+
+    setSuccess(true);
+
+    form.reset();
+    setMessage("");
+    setBookTitle("");
+
+  } catch (error) {
+    console.error(error);
+    setErrorMessage("Något gick fel, försök igen.");
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col pb-5 gap-6">

@@ -15,6 +15,7 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://anderseklund.vercel.app"),
   title: "Heby Historia",
   description:
     "Böcker om Hebys historia under 1900-talet av Anders Eklund.",

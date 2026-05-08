@@ -24,7 +24,7 @@ export function BookCard({ book, onSelectBook }: Props) {
       w-full
       h-full
       max-w-[260px]
-      max-h-[360px]
+      max-h-[420px]
       object-contain
       mx-auto
       block

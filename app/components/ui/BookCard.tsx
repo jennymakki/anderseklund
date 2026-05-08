@@ -23,7 +23,7 @@ export function BookCard({ book, onSelectBook }: Props) {
     className="
       w-full
       h-full
-      max-w-[260px]
+      max-w-[230px]
       max-h-[420px]
       object-contain
       mx-auto

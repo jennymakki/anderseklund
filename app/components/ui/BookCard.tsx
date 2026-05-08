@@ -14,16 +14,20 @@ type Props = {
 export function BookCard({ book, onSelectBook }: Props) {
   return (
     <div className="group border border-[var(--color-border)] rounded-md overflow-hidden bg-white flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-      <div className="aspect-square bg-[var(--color-secondary)] flex items-center justify-center p-4">
+      <div className="aspect-square bg-[var(--color-secondary)] flex items-center justify-center p-4 overflow-hidden">
         <Image
           src={book.image}
           alt={book.title}
           width={260}
           height={260}
           className="
-      block
-      mx-auto
+      w-full
+      h-full
+      max-w-[260px]
+      max-h-[260px]
       object-contain
+      mx-auto
+      block
       shadow-[6px_6px_12px_rgba(0,0,0,0.25)]
       transition-transform duration-300
       group-hover:scale-[1.03]

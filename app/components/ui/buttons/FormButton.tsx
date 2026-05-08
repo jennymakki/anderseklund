@@ -22,6 +22,7 @@ export function FormButton({ children, onClick, disabled }: Props) {
         hover:opacity-90
         disabled:opacity-50
         disabled:cursor-not-allowed
+        cursor-pointer
       "
     >
       {disabled ? "SKICKAR..." : children}

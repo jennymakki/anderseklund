@@ -23,12 +23,12 @@ export function BookCard({ book, onSelectBook }: Props) {
     className="
       w-full
       h-full
-      max-w-[230px]
-      max-h-[420px]
+      max-w-[300px]
+      max-h-[450px]
+      bg-[var(--color-secondary)]
       object-contain
       mx-auto
       block
-      shadow-[6px_6px_12px_rgba(0,0,0,0.25)]
       transition-transform duration-300
       group-hover:scale-[1.03]
     "

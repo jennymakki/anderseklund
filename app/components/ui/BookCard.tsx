@@ -14,13 +14,13 @@ type Props = {
 export function BookCard({ book, onSelectBook }: Props) {
   return (
     <div className="group border border-[var(--color-border)] rounded-md overflow-hidden bg-white flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-<div className="aspect-square bg-[var(--color-secondary)] flex items-center justify-center p-4 overflow-hidden">
-  <Image
-    src={book.image}
-    alt={book.title}
-    width={260}
-    height={260}
-    className="
+      <div className="aspect-square bg-[var(--color-secondary)] flex items-center justify-center p-4 overflow-hidden">
+        <Image
+          src={book.image}
+          alt={book.title}
+          width={260}
+          height={260}
+          className="
       w-full
       h-full
       max-w-[300px]
@@ -32,15 +32,15 @@ export function BookCard({ book, onSelectBook }: Props) {
       transition-transform duration-300
       group-hover:scale-[1.03]
     "
-  />
-</div>
+        />
+      </div>
 
       <div className="p-6 flex flex-col flex-1 gap-3">
         <h3 className="font-serif font-bold text-[var(--color-primary)] text-xl">
           {book.title}
         </h3>
 
-        <p className="text-base text-[var(--color-text-secondary)] leading-relaxed line-clamp-6">
+        <p className="text-base text-[var(--color-text-secondary)] leading-relaxed line-clamp-10">
           {book.description}
         </p>
 

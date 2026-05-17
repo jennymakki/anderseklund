@@ -15,18 +15,6 @@ The project focuses on storytelling, readability, and modular frontend architect
 
 The application is structured around reusable and scalable components.
 
-### Folder Structure
-
-app/
-├── api/
-│ └── contact/
-├── components/
-│ ├── blocks/
-│ └── ui/
-├── data/
-│ ├── books.ts
-│ └── events.ts
-
 ### Component Strategy
 
 The project separates:

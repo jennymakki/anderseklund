@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Anders Eklund – Author Website
 
-## Getting Started
+A modern, component-driven author website built for local historical writer Anders Eklund.
 
-First, run the development server:
+The project focuses on storytelling, readability, and modular frontend architecture using Next.js and reusable UI patterns.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Architecture
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The application is structured around reusable and scalable components.
 
-## Learn More
+### Folder Structure
 
-To learn more about Next.js, take a look at the following resources:
+app/
+├── api/
+│ └── contact/
+├── components/
+│ ├── blocks/
+│ └── ui/
+├── data/
+│ ├── books.ts
+│ └── events.ts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Component Strategy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The project separates:
 
-## Deploy on Vercel
+- **Blocks** → page-level content sections
+- **UI components** → reusable interface primitives
+- **Data layer** → centralized structured content
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This approach makes the website:
+- easier to maintain
+- scalable for future content
+- consistent in styling and behavior
+- simple to extend with new sections or books
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Examples
+
+#### Blocks
+Located in `components/blocks`
+
+These are larger content-driven sections:
+- Hero
+- Author
+- BookSection
+- Events
+- Contact
+
+#### UI Components
+Located in `components/ui`
+
+Reusable building blocks:
+- Buttons
+- Cards
+- Containers
+- Inputs
+- Dividers
+
+This creates a clean separation between:
+- presentation
+- layout
+- content logic
+
+## Features
+
+- Event presentation system
+- Contact form API route
+- Responsive layout
+- Modular design system
+- Clean content hierarchy
+
+## Design Philosophy
+
+The website was designed to support:
+- long-form storytelling
+- historical content presentation
+- accessibility and readability
+- calm Scandinavian-inspired visual design
+
+The component-based structure also allows future additions such as:
+- CMS integration
+- animations
+- multilingual support
+- searchable archives
+- book filtering

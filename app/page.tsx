@@ -1,6 +1,8 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useState } from "react";
+
 import Hero from "./components/blocks/Hero";
 import Author from "./components/blocks/Author";
 import BookSection from "./components/blocks/BookSection";
@@ -14,17 +16,52 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center bg-zinc-50">
       <section className="w-full py-0 px-0 bg-white space-y-6">
-        <Hero />
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
+          <Hero />
+        </motion.div>
 
-        <Author />
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.1 }}
+          viewport={{ once: true }}
+        >
+          <Author />
+        </motion.div>
 
-        <BookSection onSelectBook={setSelectedBook} />
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <BookSection onSelectBook={setSelectedBook} />
+        </motion.div>
 
-        <Events />
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <Events />
+        </motion.div>
 
-        <Contact selectedBook={selectedBook} />
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <Contact selectedBook={selectedBook} />
+        </motion.div>
 
-        <div className=" bg-[#D8DBDF] relative flex justify-center -mt-16 md:-mt-24">
+        <div className="bg-[#D8DBDF] relative flex justify-center -mt-16 md:-mt-24">
           <Siluett />
         </div>
       </section>

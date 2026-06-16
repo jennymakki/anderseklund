@@ -1,12 +1,12 @@
 export const events = [
   {
     id: 1,
-    title: "Trivselkväll i Hembygdsgården",
-    date: "2026-05-18",
-    displayDate: "18 maj 2026",
-    time: "19:00",
+    title: "Bokmässa i Sala",
+    date: "2026-08-30",
+    displayDate: "28-30 augusti 2026",
+    time: "Återkommer om tid",
     description:
-      "Kom och dela minnen om Heby på 60-talet med Anders Eklund som skrivit boken 'Heby - en by i förändring'",
+      "Mer info kommer",
   },
   {
     id: 2,

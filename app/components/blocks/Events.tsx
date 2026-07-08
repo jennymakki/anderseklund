@@ -28,7 +28,7 @@ export default function Events() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-10 items-center justify-center w-full max-w-4xl mx-auto">
+        <div className="flex flex-col gap-10 items-center justify-center w-full max-w-4xl mx-auto">
           {activeEvents.map((event) => (
             <EventCard
               key={event.id}

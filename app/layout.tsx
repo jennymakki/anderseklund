@@ -15,23 +15,26 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://anderseklund.vercel.app"),
+  metadataBase: new URL("https://hebyhistoria.se"),
   title: "Heby Historia",
-  description:
-    "Böcker om Hebys historia under 1900-talet av Anders Eklund.",
+  description: "Böcker om Hebys historia under 1900-talet av Anders Eklund.",
   keywords: [
     "Heby",
     "historia",
     "Anders Eklund",
     "böcker",
     "lokalhistoria",
+    "Heby historia",
   ],
+
+  verification: {
+    google: "IdOvnR1qVa0G3AOlVtzRy2GBE_fjCXEj2WWw2fsj_zM",
+  },
 
   openGraph: {
     title: "Heby Historia",
-    description:
-      "Böcker om Hebys historia under 1900-talet av Anders Eklund.",
-    url: "https://anderseklund.vercel.app",
+    description: "Böcker om Hebys historia under 1900-talet av Anders Eklund.",
+    url: "https://hebyhistoria.se",
     siteName: "Heby Historia",
     images: [
       {
@@ -48,11 +51,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Heby Historia",
-    description:
-      "Böcker om Hebys historia under 1900-talet av Anders Eklund.",
+    description: "Böcker om Hebys historia under 1900-talet av Anders Eklund.",
     images: ["/og-image.png"],
   },
-}
+};
 
 export default function RootLayout({
   children,

@@ -6,6 +6,18 @@ export default function Footer() {
           © {new Date().getFullYear()} Heby Historia – Lokala berättelser från
           hjärtat av Heby
         </p>
+
+        <p className="mt-3 text-[var(--color-beige)]/70 text-xs">
+          Webbplats designad och utvecklad av{" "}
+          <a
+            href="https://www.makkistudio.se"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 hover:text-[var(--color-beige)] transition"
+          >
+            Makki Studio
+          </a>
+        </p>
       </div>
     </footer>
   );

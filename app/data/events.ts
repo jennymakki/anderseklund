@@ -1,21 +1,12 @@
 export const events = [
-    {
-    id: 1,
-    title: "Författarträff",
-    date: "2026-08-12",
-    displayDate: "12 augusti 2026",
-    time: "18:30",
-    description:
-      "Kom och träffa mig på Jessans Café i Heby för att diskutera Hebys historia och mina böcker. Fredrik Eklund kommer dessutom spela live-musik.",
-  },
   {
     id: 2,
-    title: "Bokmässa i Sala",
+    title: "Salamässan",
     date: "2026-08-30",
     displayDate: "28-30 augusti 2026",
-    time: "Återkommer om exakt tid",
+    time: "Fre 12-18, Lör 10-18, Sön 10-16",
     description:
-      "Mer info kommer",
+      "Testa dina kunskaper i vårt quiz, ta en kaffe och upptäck Hebys historia – och passa på att bläddra bland våra historiska böcker.",
   },
   {
     id: 3,

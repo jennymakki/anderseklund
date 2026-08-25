@@ -178,7 +178,7 @@ export default function QuizPage() {
             <p className="text-[var(--color-primary)] text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mt-5 sm:mt-6">
               Testa dina kunskaper om Hebys historia!
               Svara på de tio frågorna och var med i
-              utlottningen av tre böcker.
+              utlottningen av tre böcker. Svara innan kl 18:00 sön 30/8.
             </p>
 
           </header>
@@ -302,7 +302,7 @@ export default function QuizPage() {
                 </p>
 
                 <h2 className="font-serif text-2xl sm:text-3xl text-[var(--color-primary)] leading-tight">
-                  Hur många lingon finns det i burken?
+                  Hur många lingon finns det i burken på Salamässan?
                 </h2>
 
                 <p className="text-[var(--color-primary)] mt-3 mb-5">

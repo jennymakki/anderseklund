@@ -9,6 +9,7 @@ import BookSection from "./components/blocks/BookSection";
 import Contact from "./components/blocks/Contact";
 import Events from "./components/blocks/Events";
 import Siluett from "./components/blocks/Siluett";
+import SalaMassan from "./components/blocks/SalaMassan";
 
 export default function Home() {
   const [selectedBook, setSelectedBook] = useState("");
@@ -44,11 +45,21 @@ export default function Home() {
         </motion.div>
 
         <motion.div
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7, delay: 0.2 }}
+  viewport={{ once: true }}
+>
+  <SalaMassan />
+</motion.div>
+
+        <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           viewport={{ once: true }}
         >
+          
           <Events />
         </motion.div>
 

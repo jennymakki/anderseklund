@@ -1,5 +1,14 @@
 export const events = [
   {
+    id: 4,
+    title: "Studiecirkel",
+    date: "2026-10-13",
+    displayDate: "Start 13 Oktober",
+    time: "Kontakta mig för mer info",
+    description:
+      "Vi kommer befinna oss på Heby Torg.",
+  },
+  {
     id: 3,
     title: "Minnesinsamling om Heby",
     date: null,

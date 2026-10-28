@@ -1,8 +1,8 @@
 import { Container } from "../ui/Container";
-import ContactForm from "./ContactForm";
+// import ContactForm from "./ContactForm";s
 import { Divider } from "../ui/Divider";
 
-export default function Contact({ selectedBook }: { selectedBook?: string }) {
+export default function Contact /*({ selectedBook }: { selectedBook?: string }) */ () {
   return (
     <section id="kontakt" className="py-24 bg-[#D8DBDF] text-white scroll-mt-25">
       <Container>
@@ -20,11 +20,11 @@ export default function Contact({ selectedBook }: { selectedBook?: string }) {
 
             <p className="text-[var(--color-primary)] leading-relaxed">
               Intresserad av en bok eller vill veta mer om Hebys historia?
-              Skicka ett meddelande så svarar jag personligen.
+              Skicka ett meddelande till kattmynta@hotmail.com så svarar jag personligen.
             </p>
           </div>
 
-          <ContactForm selectedBook={selectedBook} />
+          {/* <ContactForm selectedBook={selectedBook} /> */}
 
         </div>
 

@@ -1,12 +1,21 @@
 export const events = [
   {
-    id: 4,
+    id: 2,
     title: "Studiecirkel",
-    date: "2026-10-13",
-    displayDate: "Start 13 Oktober",
-    time: "Kontakta mig för mer info",
+    date: null,
+    displayDate: "Start i oktober",
+    time: "",
     description:
-      "Vi kommer befinna oss på Heby Torg.",
+      "I oktober startade jag en studiecirkel kring boken Heby - från järnvägen till år 1899 på Torget i Heby. I studiefrämjandets regi.",
+  },
+  {
+    id: 4,
+    title: "Bokpresentation",
+    date: "2026-11-20",
+    displayDate: "Fredag 20 November",
+    time: "",
+    description:
+      "Jag kommer prata om min senaste bok på Upplands fornminnes- och hembygdsförening.",
   },
   {
     id: 3,

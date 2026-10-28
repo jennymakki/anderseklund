@@ -20,7 +20,7 @@ export default function Contact /*({ selectedBook }: { selectedBook?: string }) 
 
             <p className="text-[var(--color-primary)] leading-relaxed">
               Intresserad av en bok eller vill veta mer om Hebys historia?
-              Skicka ett meddelande till kattmynta@hotmail.com så svarar jag personligen.
+              Skicka ett meddelande till <a href="mailto:kattmynta@hotmail.com" className="underline hover:opacity-75">kattmynta@hotmail.com</a>{" "} så svarar jag personligen.
             </p>
           </div>
 

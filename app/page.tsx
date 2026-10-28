@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+/* import { useState } from "react"; */
 
 import Hero from "./components/blocks/Hero";
 import Author from "./components/blocks/Author";
@@ -12,7 +12,7 @@ import Siluett from "./components/blocks/Siluett";
 import SalaMassan from "./components/blocks/SalaMassan";
 
 export default function Home() {
-  const [selectedBook, setSelectedBook] = useState("");
+  /* const [selectedBook, setSelectedBook] = useState(""); */
 
   return (
     <div className="flex flex-col items-center justify-center bg-zinc-50">
@@ -41,7 +41,7 @@ export default function Home() {
           transition={{ duration: 0.7, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <BookSection onSelectBook={setSelectedBook} />
+           <BookSection /* onSelectBook={setSelectedBook} */ />
         </motion.div>
 
         <motion.div
@@ -69,7 +69,7 @@ export default function Home() {
           transition={{ duration: 0.7, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <Contact selectedBook={selectedBook} />
+          <Contact /* selectedBook={selectedBook} */ />
         </motion.div>
 
         <div className="bg-[#D8DBDF] relative flex justify-center -mt-16 md:-mt-24">
